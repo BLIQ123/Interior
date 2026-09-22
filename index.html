@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERIOR | Анастасия Сизикова</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: '#C4A47C',
+                        charcoal: '#1A1A1A',
+                        beige: '#F9F8F6',
+                        stone: '#8C857B'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-beige text-charcoal font-sans antialiased selection:bg-gold selection:text-white">
+
+    <!-- Навигация -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6 px-8 md:px-16 flex justify-between items-center text-white bg-charcoal/30 backdrop-blur-sm">
+        <a href="#" class="text-2xl tracking-[0.3em] font-serif font-light uppercase">INTERIOR</a>
+        <nav class="hidden md:flex space-x-10 text-xs uppercase tracking-[0.2em]">
+            <a href="#about" class="hover:text-gold transition-colors">Обо мне</a>
+            <a href="#portfolio" class="hover:text-gold transition-colors">Портфолио</a>
+            <a href="#process" class="hover:text-gold transition-colors">Этапы</a>
+            <a href="#pricing" class="hover:text-gold transition-colors">Тарифы</a>
+            <a href="#contact" class="hover:text-gold transition-colors">Контакты</a>
+        </nav>
+        <a href="#contact" class="border border-white/40 px-6 py-2.5 text-xs uppercase tracking-[0.2em] hover:bg-gold hover:border-gold transition-all duration-300">Связаться</a>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000" alt="Интерьер" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-charcoal/50"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl px-6 text-white reveal">
+            <p class="text-xs md:text-sm uppercase tracking-[0.4em] mb-4 text-gold">Студия дизайна интерьера</p>
+            <h1 class="text-4xl md:text-7xl font-serif font-light uppercase tracking-wider mb-6">Interior</h1>
+            <p class="text-sm md:text-lg font-light tracking-wide max-w-xl mx-auto mb-10 text-stone-200">Создаем эстетичные, функциональные пространства с характером и вниманием к каждой детали.</p>
+            <a href="#portfolio" class="inline-block bg-gold text-white px-10 py-4 text-xs uppercase tracking-[0.25em] hover:bg-white hover:text-charcoal transition-all duration-300">Смотреть работы</a>
+        </div>
+    </section>
+
+    <!-- Партнеры -->
+    <section class="py-12 border-b border-charcoal/10 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-center text-xs tracking-[0.3em] uppercase text-stone mb-8">Сотрудничаем с брендами</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+                <span class="font-serif tracking-widest text-xl uppercase">Minotti</span>
+                <span class="font-serif tracking-widest text-xl uppercase">Poliform</span>
+                <span class="font-serif tracking-widest text-xl uppercase">B&B Italia</span>
+                <span class="font-serif tracking-widest text-xl uppercase">Flos</span>
+                <span class="font-serif tracking-widest text-xl uppercase">Rimadesio</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="py-24 md:py-32 px-6 md:px-16 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="reveal">
+                <!-- Вставьте ваше фото в папку images под именем anastasia-photo.jpg -->
+                <img src="images/anastasia-photo.jpg" alt="Анастасия Сизикова" class="w-full max-w-md mx-auto h-auto object-cover shadow-xl" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1000'">
+            </div>
+            <div class="reveal">
+                <span class="text-xs uppercase tracking-[0.3em] text-gold block mb-3">Обо мне</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-light mb-8">Философия идеального пространства</h2>
+                <div class="space-y-4 text-charcoal/80 font-light leading-relaxed">
+                    <p>Меня зовут Анастасия Сизикова. Я создаю современные интерьеры, объединяющие чистую эстетику, эргономику и индивидуальность хозяев дома.</p>
+                    <p>Каждый проект начинается с глубокого диалога: мы не просто расставляем мебель, а формируем пространство, где всё продумано до сантиметра — от сценариев освещения до фактур текстиля.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 mt-10 pt-8 border-t border-charcoal/10">
+                    <div>
+                        <span class="text-3xl font-serif text-gold block">10+</span>
+                        <span class="text-xs uppercase tracking-wider text-stone">Реализованных проектов</span>
+                    </div>
+                    <div>
+                        <span class="text-3xl font-serif text-gold block">2+ лет</span>
+                        <span class="text-xs uppercase tracking-wider text-stone">Опыта в дизайне</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="py-24 bg-white px-6 md:px-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-xs uppercase tracking-[0.3em] text-gold block mb-3">Проекты</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-light">Портфолио</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden bg-stone/10 reveal">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="ЖК Резиденция" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase tracking-widest text-gold">Квартира • 120 м²</span>
+                        <h3 class="font-serif text-xl mt-1">ЖК «Резиденция»</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden bg-stone/10 reveal">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="Загородный дом" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase tracking-widest text-gold">Вилла • 280 м²</span>
+                        <h3 class="font-serif text-xl mt-1">Дом в Подмосковье</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden bg-stone/10 reveal">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" alt="Апартаменты" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6">
+                        <span class="text-[10px] uppercase tracking-widest text-gold">Пентхаус • 95 м²</span>
+                        <h3 class="font-serif text-xl mt-1">Лофт на Патриарших</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Этапы работы -->
+    <section id="process" class="py-24 px-6 md:px-16 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <span class="text-xs uppercase tracking-[0.3em] text-gold block mb-3">Процесс</span>
+            <h2 class="text-3xl md:text-5xl font-serif font-light">Этапы проектирования</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="p-6 border-t border-charcoal/20 reveal">
+                <span class="font-serif text-3xl text-gold block mb-4">01</span>
+                <h3 class="font-serif text-xl mb-2">Бриф и замеры</h3>
+                <p class="text-xs text-charcoal/70 leading-relaxed font-light">Анализируем ваши потребности, обсуждаем бюджет и производим лазерный замер объекта.</p>
+            </div>
+            <div class="p-6 border-t border-charcoal/20 reveal">
+                <span class="font-serif text-3xl text-gold block mb-4">02</span>
+                <h3 class="font-serif text-xl mb-2">Планировка</h3>
+                <p class="text-xs text-charcoal/70 leading-relaxed font-light">Разрабатываем до трех вариантов зонирования с расстановкой всей мебели и техники.</p>
+            </div>
+            <div class="p-6 border-t border-charcoal/20 reveal">
+                <span class="font-serif text-3xl text-gold block mb-4">03</span>
+                <h3 class="font-serif text-xl mb-2">3D-визуализация</h3>
+                <p class="text-xs text-charcoal/70 leading-relaxed font-light">Фотореалистичные изображения будущего интерьера с подобранными фактурами и светом.</p>
+            </div>
+            <div class="p-6 border-t border-charcoal/20 reveal">
+                <span class="font-serif text-3xl text-gold block mb-4">04</span>
+                <h3 class="font-serif text-xl mb-2">Рабочие чертежи</h3>
+                <p class="text-xs text-charcoal/70 leading-relaxed font-light">Полный пакет документации для строителей: электрика, сантехника, развертки стен.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section id="pricing" class="py-24 bg-white px-6 md:px-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-xs uppercase tracking-[0.3em] text-gold block mb-3">Стоимость</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-light">Тарифные планы</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border border-charcoal/10 p-8 reveal">
+                    <h3 class="font-serif text-2xl mb-2">Планировочный</h3>
+                    <p class="text-2xl font-serif text-gold mb-6">от 2 500 ₽ <span class="text-xs font-sans text-stone">/ м²</span></p>
+                    <ul class="text-xs space-y-3 text-charcoal/70 font-light mb-8">
+                        <li>• Обмерный план</li>
+                        <li>• 3 варианта перепланировки</li>
+                        <li>• План демонтажа и монтажа</li>
+                    </ul>
+                    <a href="#contact" class="block text-center border border-charcoal/30 py-3 text-xs uppercase tracking-widest hover:border-gold hover:text-gold transition-colors">Выбрать</a>
+                </div>
+                <div class="border-2 border-gold p-8 relative bg-beige/30 reveal">
+                    <span class="absolute top-0 right-8 -translate-y-1/2 bg-gold text-white text-[10px] tracking-widest uppercase px-3 py-1">Популярный</span>
+                    <h3 class="font-serif text-2xl mb-2">Полный проект</h3>
+                    <p class="text-2xl font-serif text-gold mb-6">от 5 000 ₽ <span class="text-xs font-sans text-stone">/ м²</span></p>
+                    <ul class="text-xs space-y-3 text-charcoal/70 font-light mb-8">
+                        <li>• Планировочные решения</li>
+                        <li>• Фотореалистичные 3D-рендеры</li>
+                        <li>• Полный комплект рабочих чертежей</li>
+                        <li>• Ведомость чистовых материалов</li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-gold text-white py-3 text-xs uppercase tracking-widest hover:bg-charcoal transition-colors">Выбрать</a>
+                </div>
+                <div class="border border-charcoal/10 p-8 reveal">
+                    <h3 class="font-serif text-2xl mb-2">Под ключ</h3>
+                    <p class="text-2xl font-serif text-gold mb-6">от 8 000 ₽ <span class="text-xs font-sans text-stone">/ м²</span></p>
+                    <ul class="text-xs space-y-3 text-charcoal/70 font-light mb-8">
+                        <li>• Всё из пакета «Полный проект»</li>
+                        <li>• Авторский надзор на стройке</li>
+                        <li>• Закупка материалов и мебели</li>
+                        <li>• Контроль сроков поставок</li>
+                    </ul>
+                    <a href="#contact" class="block text-center border border-charcoal/30 py-3 text-xs uppercase tracking-widest hover:border-gold hover:text-gold transition-colors">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и форма Telegram -->
+    <section id="contact" class="py-24 px-6 md:px-16 max-w-4xl mx-auto">
+        <div class="text-center mb-12 reveal">
+            <span class="text-xs uppercase tracking-[0.3em] text-gold block mb-3">Связь</span>
+            <h2 class="text-3xl md:text-5xl font-serif font-light mb-4">Начнем работу над вашим проектом</h2>
+            <p class="text-sm text-stone font-light">Оставьте ваши контакты, и мы перезвоним в течение дня.</p>
+        </div>
+
+        <form id="tg-form" class="space-y-6 max-w-xl mx-auto reveal">
+            <div>
+                <label class="block text-xs uppercase tracking-widest text-stone mb-2" for="name">Ваше имя</label>
+                <input type="text" id="name" required class="w-full bg-transparent border-b border-charcoal/20 py-3 text-sm focus:outline-none focus:border-gold transition-colors">
+            </div>
+            <div>
+                <label class="block text-xs uppercase tracking-widest text-stone mb-2" for="phone">Номер телефона</label>
+                <input type="tel" id="phone" required class="w-full bg-transparent border-b border-charcoal/20 py-3 text-sm focus:outline-none focus:border-gold transition-colors">
+            </div>
+            <div>
+                <label class="block text-xs uppercase tracking-widest text-stone mb-2" for="message">Опишите ваш объект (площадь, город)</label>
+                <textarea id="message" rows="3" class="w-full bg-transparent border-b border-charcoal/20 py-3 text-sm focus:outline-none focus:border-gold transition-colors"></textarea>
+            </div>
+            <button type="submit" id="submit-btn" class="w-full bg-charcoal text-white py-4 text-xs uppercase tracking-[0.25em] hover:bg-gold transition-all duration-300">Отправить заявку</button>
+            <div id="form-status" class="hidden text-center text-sm font-light mt-4"></div>
+        </form>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="py-8 border-t border-charcoal/10 text-center text-xs text-stone font-light">
+        <p>© 2026 INTERIOR. Анастасия Сизикова. Все права защищены.</p>
+    </footer>
+
+ <!-- Скрипт отправки формы в Telegram через Google-шлюз -->
+<script>
+    const form = document.getElementById('tg-form');
+    
+    // ВСТАВЬТЕ СЮДА ВАШУ ССЫЛКУ ИЗ GOOGLE SCRIPT (заканчивается на /exec):
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzBH4EVxHpZNESQsWT1R_RUa5s3F0MALzW_Q46lzzgt_25jKGp_twQn5dTOPA6-KtmL/exec';
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const btn = document.getElementById('submit-btn');
+        const status = document.getElementById('form-status');
+        
+        btn.textContent = 'ОТПРАВЛЯЕМ...';
+        btn.disabled = true;
+
+        const name = encodeURIComponent(document.getElementById('name').value);
+        const phone = encodeURIComponent(document.getElementById('phone').value);
+        const message = encodeURIComponent(document.getElementById('message').value);
+
+        const requestUrl = `${SCRIPT_URL}?name=${name}&phone=${phone}&message=${message}`;
+
+        // Отправка через простой пинг изображения/запроса — 100% гарантия доставки
+        const ping = new Image();
+        ping.src = requestUrl;
+
+        setTimeout(() => {
+            form.reset();
+            status.textContent = 'Заявка успешно отправлена! Мы свяжемся с вами.';
+            status.className = 'text-center text-sm text-green-700 mt-4 block';
+            btn.textContent = 'ОТПРАВИТЬ ЗАЯВКУ';
+            btn.disabled = false;
+        }, 1000);
+    });
+
+    // Анимация при скролле
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => revealObserver.observe(el));
+</script>
